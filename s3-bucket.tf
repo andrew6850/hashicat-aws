@@ -3,7 +3,7 @@ module "s3_bucket" {
 
   bucket = "my-s3-bucket"
   acl    = "private"
-  bucket_prefix = "andrewt"
+  bucket_prefix = "andrewty"
 
   control_object_ownership = true
   object_ownership         = "ObjectWriter"
