@@ -1,14 +1,6 @@
-module "s3_bucket" {
-  source = "terraform-aws-modules/s3-bucket/aws"
-
-  bucket = "my-s3-bucket"
-  acl    = "private"
+module "s3-bucket" {
+  source  = "app.terraform.io/a21y/s3-bucket/aws"
+  version = "2.8.0"
   bucket_prefix = "andrewty"
-
-  control_object_ownership = true
-  object_ownership         = "ObjectWriter"
-
-  versioning = {
-    enabled = true
-  }
+  bucket = "my-s3-bucket"
 }
